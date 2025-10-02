@@ -174,10 +174,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0x52; // R
-        pchMessageStart[1] = 0x41; // A
-        pchMessageStart[2] = 0x56; // V
-        pchMessageStart[3] = 0x4e; // N
+        pchMessageStart[0] = 0x44; // D
+        pchMessageStart[1] = 0x49; // I
+        pchMessageStart[2] = 0x41; // A
+        pchMessageStart[3] = 0x42; // B
         nDefaultPort = 8767;
         nPruneAfterHeight = 100000;
 
@@ -231,16 +231,16 @@ public:
             5.7       // * estimated number of transactions per second after that timestamp
         };
 
-        /** RVN Start **/
+        /** DLOD Start **/
         // Burn Amounts
-        nIssueAssetBurnAmount = 500 * COIN;
-        nReissueAssetBurnAmount = 100 * COIN;
-        nIssueSubAssetBurnAmount = 100 * COIN;
-        nIssueUniqueAssetBurnAmount = 5 * COIN;
-        nIssueMsgChannelAssetBurnAmount = 100 * COIN;
-        nIssueQualifierAssetBurnAmount = 1000 * COIN;
-        nIssueSubQualifierAssetBurnAmount = 100 * COIN;
-        nIssueRestrictedAssetBurnAmount = 1500 * COIN;
+        nIssueAssetBurnAmount = 1500 * COIN;
+        nReissueAssetBurnAmount = 1100 * COIN;
+        nIssueSubAssetBurnAmount = 1100 * COIN;
+        nIssueUniqueAssetBurnAmount = 50 * COIN;
+        nIssueMsgChannelAssetBurnAmount = 1100 * COIN;
+        nIssueQualifierAssetBurnAmount = 11000 * COIN;
+        nIssueSubQualifierAssetBurnAmount = 1100 * COIN;
+        nIssueRestrictedAssetBurnAmount = 11500 * COIN;
         nAddNullQualifierTagBurnAmount = .1 * COIN;
 
         // Burn Addresses
@@ -270,7 +270,7 @@ public:
 
         nKAAAWWWPOWActivationTime = 1588788000; // UTC: Wed May 06 2020 18:00:00
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
-        /** RVN End **/
+        /** DLOD End **/
     }
 };
 
@@ -300,7 +300,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nOverrideRuleChangeActivationThreshold = 1310;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nOverrideMinerConfirmationWindow = 2016;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nOverrideMinerConfirmationWindow = 2025;
         consensus.vDeployments[Consensus::DEPLOYMENT_ASSETS].bit = 5;
         consensus.vDeployments[Consensus::DEPLOYMENT_ASSETS].nStartTime = 1533924000; // UTC: Fri Aug 10 2018 18:00:00
         consensus.vDeployments[Consensus::DEPLOYMENT_ASSETS].nTimeout = 1577257200; // UTC: Wed Dec 25 2019 07:00:00
@@ -334,10 +334,11 @@ public:
         consensus.defaultAssumeValid = uint256S("0x000000006272208605c4df3b54d4d5515759105e7ffcb258e8cd8077924ffef1");
 
 
-        pchMessageStart[0] = 0x52; // R
-        pchMessageStart[1] = 0x56; // V
-        pchMessageStart[2] = 0x4E; // N
-        pchMessageStart[3] = 0x54; // T
+        pchMessageStart[0] = 0x44; // D
+        pchMessageStart[1] = 0x49; // I
+        pchMessageStart[2] = 0x41; // A
+        pchMessageStart[3] = 0x43; // B 
+        pchMessageStart[4] = 0x43; // B 
         nDefaultPort = 18770;
         nPruneAfterHeight = 1000;
 
@@ -553,10 +554,9 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
 
-        pchMessageStart[0] = 0x43; // C
-        pchMessageStart[1] = 0x52; // R
-        pchMessageStart[2] = 0x4F; // O
-        pchMessageStart[3] = 0x57; // W
+        pchMessageStart[0] = 0x44; // D
+        pchMessageStart[1] = 0x49; // I
+        pchMessageStart[2] = 0x41; // A
         nDefaultPort = 18444;
         nPruneAfterHeight = 1000;
 
